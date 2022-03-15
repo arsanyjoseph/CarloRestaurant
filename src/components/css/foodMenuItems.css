@@ -1,0 +1,14 @@
+.cardsContainer {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    align-items: center;
+    place-items: center;
+}
+
+@media screen and (max-width: 550px) {
+    .cardsContainer {
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
