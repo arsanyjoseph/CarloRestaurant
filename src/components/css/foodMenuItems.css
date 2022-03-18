@@ -1,14 +1,19 @@
 .cardsContainer {
-    display: grid;
-    grid-template-columns: 2fr 2fr 2fr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    place-items: center;
+    padding: 10px;
 }
+ .cardsContainer * {
+     margin: 5px;
+     max-width: 15em;
+ }
 
-@media screen and (max-width: 550px) {
+/*@media screen and (max-width: 550px) {
     .cardsContainer {
         display: flex;
         flex-direction: column;
     }
     
-}
+}*/

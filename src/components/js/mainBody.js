@@ -1,27 +1,21 @@
 import React, { useEffect, useState } from "react";
 import '../css/mainBody.css';
 import Menu from './foodMenuItems'
+import { useDispatch } from "react-redux";
+import handleInitialData from "../actions/handleInitialData";
+
 
 export default function MainBody() {
-    const [data, setData] = useState({})
-
-    const getData = async ()=> {
-        await fetch('data.json', { headers: {
-            'content-type': 'application/json',
-            'accept': 'application/json'
-        }})
-        .then((res)=> res.json())
-        .then ((res)=> {
-            setData(res);
-            console.log(res)
-        })
+   
+    const dispatch = useDispatch()
+    const loadData = ()=> {
+       dispatch(handleInitialData()) 
     }
 
-    useEffect( ()=> {
-        getData()
-        .then(()=> console.log(data))
-    }, []
-    );
+    useEffect(()=> {
+        loadData();
+    },[])
+    
     return (
         <div className="bodyContainer">
             <Menu/>
