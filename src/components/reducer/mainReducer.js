@@ -9,6 +9,9 @@ export default function setData (state = initialState, action) {
         case ADD_DATA : 
         return {
             ...state,
+                categories: {
+                    ...action.data.categories
+                },
                 ...action.data
         }
         default: return state

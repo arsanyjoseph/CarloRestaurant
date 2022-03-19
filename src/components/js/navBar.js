@@ -5,6 +5,7 @@ import Button from '@mui/material/Button';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
+import { useNavigate } from 'react-router';
 
 export default function SwipeableTemporaryDrawer(props) {
   const [state, setState] = React.useState({
@@ -16,10 +17,12 @@ export default function SwipeableTemporaryDrawer(props) {
 
   const navItems = ['Home','Menu','Gallery','About'];
 
+  const navigate = useNavigate();
+
   const handleClick = (i)=> {
     if(typeof(i)=== 'string') {
       const pathRoute = i.toLowerCase()
-      console.log(pathRoute)
+      navigate(`/${pathRoute}`)
   }}
 
   const toggleDrawer = (anchor, open) => (event) => {
