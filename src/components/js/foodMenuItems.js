@@ -11,21 +11,32 @@ import { useParams } from 'react-router';
 export default function Menu (props) {
     const stateImport = useSelector((state)=> state);
     const {categories} = stateImport;
-    const [category, setCategory] = useState([])
-    const matchURL = ()=> {
-        categories.filter((i)=> {
-            let n = i.name.toLowerCase();
-            let m = n.slice(' ')
-            console.log(m)
-    })}
-    const params = useParams()
-    const arr2 = [1,2]
 
-    useEffect(()=> {
-        console.log(categories)
-        matchURL();
-    },[])
+    const [index , setIndex] = useState(0)
+    //get names of categories in Array
+    const getCategoriesNames = ()=> {
+        let namesArray= []
+        categories.map((i)=> {
+            let modifyName = i.name.split(' ').join('-').toLowerCase()
+            namesArray.push(modifyName)
+        })
+        return namesArray
+    }
+    //Storing names of categories in Array
+    const namesCatArray = getCategoriesNames()
+    //usig URL params to get category name
+    const params = useParams()
     
+    const arr2 = [1,2]
+    useEffect(()=> {
+        let n = namesCatArray.indexOf(params.category)
+        if(!n || n === -1) {
+            setIndex(0)
+        } else {
+            setIndex(n)
+        }
+ })
+
     if (!params.category) {
         return (
         <div className='menuContainer'>
@@ -41,7 +52,9 @@ export default function Menu (props) {
                     <NavTabs categoriesArray = {categories} />
                 }
                 <div className='cardsContainer'>
-                    {arr2.map((i)=> <RecipeReviewCard/> )}
+                {
+                    categories[index]['items'].map((item)=> <RecipeReviewCard key={item.id} plateName={item.name} description={item.description} imageSource={item.images} category={`${categories[index].name}`} detailsArray={item['sub-items']} />)
+                }  
                 </div>
             </div>
         )

@@ -1,0 +1,8 @@
+.homeContainer {
+    position: relative;
+}
+.homeContainer > img {
+    width: 100%;
+    opacity: 0.8;
+} 
+
