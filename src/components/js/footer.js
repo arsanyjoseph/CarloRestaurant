@@ -5,7 +5,7 @@ export default function Footer (){
       <div className="footerContainer">
           <h1>Contact us</h1>
           <p>Tel: +5987568942</p>
-          <p>Facebook/Instagram: Carlo Restaraurant</p>
+          <p>Facebook/Instagram: Ousmane's Restaraurant</p>
           <p>Address: 5126 S Conway Rd
 Orlando, FL 32812, USA</p>
       </div>

@@ -11,8 +11,8 @@ export default function About () {
         <div className="aboutContainer">
             <h1>About Us</h1>
             <div className="aboutDetailsContainer">
-                <p>Established in 1990, Carlo Restaurant is a place of Authentic Experience. Because of the calm and relaxing environment, It's the perfect choice for a quick Family gathering.</p>
-                <h4>Why Choose Carlo Restaraurant ?</h4>
+                <p>Established in 1990, Ousmane's Restaurant is a place of Authentic Experience. Because of the calm and relaxing environment, It's the perfect choice for a quick Family gathering.</p>
+                <h4>Why Choose Ousmane's Restaraurant ?</h4>
                 <p>Because WE CARE !!...</p>
                 <h4>Please Note that:</h4>
                 <p>- Reservations are available for Families of 8+ Members.</p>

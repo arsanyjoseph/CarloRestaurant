@@ -10,7 +10,7 @@ export default function Header (){
   }
     return (
       <div className="headerContainer">
-          <h1>Carlo Restaurant</h1>
+          <h1>Ousmane's Restaurant</h1>
           <SwipeableTemporaryDrawer/>
           { user.length === 0 &&
             <button onClick={handleClick}>Log In</button> 
