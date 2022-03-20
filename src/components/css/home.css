@@ -1,8 +1,22 @@
 .homeContainer {
-    position: relative;
+    font-family: 'fredoka', sans-serif;
 }
 .homeContainer > img {
+    height: 100%;
     width: 100%;
-    opacity: 0.8;
-} 
+    position: relative;
+}
+.homeContainer > h1,h2 {
+    background-color: rgba(192, 144, 81, 0.938);
+    border-radius: 5px;
+    padding: 0.3em;
+}
 
+.homeContainer > p {
+    background-color: rgb(212, 176, 129);
+    color: black;
+    max-width: fit-content;
+    padding: 1em;
+    font-size: 14pt;
+    border-radius: 5px;
+}

@@ -4,7 +4,6 @@ import '../css/foodMenuItems.css'
 import NavTabs from './categories'
 import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import {Routes, Route} from 'react-router'
 import { useParams } from 'react-router';
 
 
@@ -19,6 +18,7 @@ export default function Menu (props) {
         categories.map((i)=> {
             let modifyName = i.name.split(' ').join('-').toLowerCase()
             namesArray.push(modifyName)
+            return namesArray
         })
         return namesArray
     }
@@ -27,7 +27,6 @@ export default function Menu (props) {
     //usig URL params to get category name
     const params = useParams()
     
-    const arr2 = [1,2]
     useEffect(()=> {
         let n = namesCatArray.indexOf(params.category)
         if(!n || n === -1) {
@@ -35,7 +34,7 @@ export default function Menu (props) {
         } else {
             setIndex(n)
         }
- })
+ },[namesCatArray, params.category])
 
     if (!params.category) {
         return (

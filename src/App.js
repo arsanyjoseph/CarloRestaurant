@@ -1,16 +1,16 @@
 
 import React from 'react';
 import Header from './components/js/header';
-import SwipeableTemporaryDrawer from './components/js/navBar'
 import './App.css';
 import MainBody from './components/js/mainBody';
+import Footer from './components/js/footer';
 
 function App() {
   return (
     <div className="App">
       <Header/>
-      <SwipeableTemporaryDrawer/>
       <MainBody/>
+      <Footer />
     </div>
   );
 }

@@ -9,31 +9,16 @@ export default function About () {
     },[info])
     return (
         <div className="aboutContainer">
-        <h1>About Carlo Restaurant</h1>
-        <div className="aboutDetailsContainer">
-            <ul>
-                <li>
-                    <h3>Address :</h3>
-                    <p>{info.address}</p>
-                </li>
-                <li>
-                    <h3>Average Delivery Time :</h3>
-                    <p>{info['avg_delivery_time']}</p>
-                </li>
-                <li>
-                    <h3>Total Menu Categories :</h3>
-                    <p>{info['total-category']}</p>
-                </li>
-                <li>
-                    <h3>Total Food Items :</h3>
-                    <p>{info['total-food-items']}</p>
-                </li>
-                <li>
-                    <h3>Contact Us</h3>
-                    <p>+875481246</p>
-                </li>
-            </ul>
-        </div>
+            <h1>About Us</h1>
+            <div className="aboutDetailsContainer">
+                <p>Established in 1990, Carlo Restaurant is a place of Authentic Experience. Because of the calm and relaxing environment, It's the perfect choice for a quick Family gathering.</p>
+                <h4>Why Choose Carlo Restaraurant ?</h4>
+                <p>Because WE CARE !!...</p>
+                <h4>Please Note that:</h4>
+                <p>- Reservations are available for Families of 8+ Members.</p>
+                <p>- We delightfully announce the opening of a cozy Kids Area at the Back side of the lounge.</p>
+                <h4>Internships for Culinary Students are availabe... Submit a "Contact Us" Form titled with "Culinary Student"</h4>
+            </div>
         </div>
     )
 }

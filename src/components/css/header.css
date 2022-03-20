@@ -4,4 +4,29 @@
     color: white;
     box-shadow: 2px 2px 2px grey;
     padding: 0.1em 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-content: center;
 }
+
+.headerContainer > button {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    font-size: 14pt;
+    font-family: 'fredoka', sans-serif;
+}
+
+.headerContainer > h1 {
+   margin-right: 10em;
+}
+
+.headerContainer * {
+    margin: 0.5em 1em;
+}
+

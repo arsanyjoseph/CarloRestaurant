@@ -6,6 +6,7 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import { useNavigate } from 'react-router';
+import {useState} from 'react'
 
 export default function SwipeableTemporaryDrawer(props) {
   const [state, setState] = React.useState({
@@ -15,7 +16,7 @@ export default function SwipeableTemporaryDrawer(props) {
     right: false,
   });
 
-  const navItems = ['Home','Menu','Gallery','About'];
+  const navItems = ['Home','Menu','Gallery','About','Contact'];
 
   const navigate = useNavigate();
 
@@ -33,7 +34,6 @@ export default function SwipeableTemporaryDrawer(props) {
     ) {
       return;
     }
-
     setState({ ...state, [anchor]: open });
   };
 
@@ -58,7 +58,7 @@ export default function SwipeableTemporaryDrawer(props) {
     <div>
       {['left'].map((anchor) => (
         <React.Fragment key={anchor}>
-          <Button onClick={toggleDrawer(anchor, true)}>Navigation</Button>
+          <Button variant='primary' onClick={toggleDrawer(anchor, true)}>Show Menu</Button>
           <SwipeableDrawer
             anchor={anchor}
             open={state[anchor]}
